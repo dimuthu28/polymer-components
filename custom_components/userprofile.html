@@ -1,0 +1,38 @@
+<link rel="import" href="../bower_components/polymer/polymer.html" >
+<!--component definition-->
+<dom-module id="student-basic-data">
+    <link rel="stylesheet" href="../default_styles/user_profile1.css">
+    <template>
+        <div class="user-box">
+            <div>
+                <span class="image-holder"><img class="user-image" src="https://randomuser.me/api/portraits/thumb/men/15.jpg"/></span>
+
+            </div>
+        </div>
+    </template>
+</dom-module>
+
+<script>
+    Polymer({
+        is:"student-basic-data",
+        properties:{
+            objectuser:{
+                type:Object,
+                notify:true,
+                observer:"_singleUserObjectChanged"
+            }
+        },
+        ready:function(){
+            console.log("Sample test data");
+        },
+        _singleUserObjectChanged:function(newVal, oldVal){
+            console.log("Test Single User data ");
+        }
+    });
+
+    //Object properties
+    //thumb url
+
+</script>
+
+

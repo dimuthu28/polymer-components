@@ -1,0 +1,11 @@
+.user-box {
+    background-color: #e6e6e6;
+    position: relative;
+    /*padding: 12px 4px;*/
+    border-top: 1px solid #C6c6c6;
+    border-bottom: 1px solid #C6c6c6;
+}
+
+.image-holder .user-image{
+    border-radius: 50em;
+}
