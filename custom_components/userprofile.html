@@ -1,20 +1,22 @@
+
+
 <link rel="import" href="../bower_components/polymer/polymer.html" >
 <!--component definition-->
 <dom-module id="student-basic-data">
-    
-    <style>
-       .user-box{
-           background-color: #e6e6e6;
-           position: relative;
-           border-top: 1px solid #C6c6c6;
-           border-bottom: 1px solid #C6c6c6;
-           @apply(--student-basic-data-user-box-theme);
-       }
 
-       .image-holder .user-image{
-           border-radius: 50em;
-           @apply(--student-basic-data-image-holder-theme);
-       }
+    <style>
+        .user-box{
+            background-color: #e6e6e6;
+            position: relative;
+            border-top: 1px solid #C6c6c6;
+            border-bottom: 1px solid #C6c6c6;
+            @apply(--student-basic-data-user-box-theme);
+        }
+
+        .image-holder .user-image{
+            border-radius: 50em;
+            @apply(--student-basic-data-image-holder-theme);
+        }
 
     </style>
     <template>
@@ -22,7 +24,7 @@
             <div>
                 <span class="image-holder"><img class="user-image" src="https://randomuser.me/api/portraits/thumb/men/15.jpg"/></span>
                 <span>{{username}}</span>
-                <span>{{objectuser.usernamee}}</span>
+                <span>{{objectuser.id}}</span>
             </div>
         </div>
     </template>
@@ -34,24 +36,17 @@
         properties:{
             objectuser:{
                 type:Object,
-                notify:true,
-                observer:"_singleUserObjectChanged"
+                notify:true
             },
             username:{
                 type:String
             }
         },
         ready:function(){
-            console.log("Sample test data");
+            console.log("Ready");
         },
-        _singleUserObjectChanged:function(newVal, oldVal){
-            console.log("Test Single User data ");
+        _singleUserObjectChanged:function(objtt){
         }
     });
 
-    //Object properties
-    //thumb url
-
 </script>
-
-
